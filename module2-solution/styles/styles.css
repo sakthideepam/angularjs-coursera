@@ -1,0 +1,45 @@
+/* Shopping List header */
+h1 {
+  text-align: center;
+  color: rgb(14, 14, 206);
+}
+/* List Item */
+.list-item {
+  margin-bottom: 15px;
+  position: relative;
+  max-width: 190px;
+  height: 30px;
+  border: 2px solid darkcyan;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: darkcyan;
+  color: white;
+  padding-left: 5px;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+/* List item of bought list */
+.bought-list .list-item {
+  max-width: 150px;
+}
+/* Bought button */
+.list-item button {
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+  background-color: rgb(230, 115, 245);
+  margin-right: 5px;
+  border: 2px solid rgb(230, 115, 245);
+}
+/* List titles */
+div h4 {
+  font-size: 1.5em;
+  color: firebrick;
+}
+/* List emty message */
+.list-msg {
+  font-size: 1.4em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 5px 5px 5px blue;
+  margin-left: 10px;
+}
