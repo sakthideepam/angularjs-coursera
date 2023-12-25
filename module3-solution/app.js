@@ -38,6 +38,7 @@
     ctrl.emptySearchMsg = "";
 
     ctrl.filterMenuItems = function () {
+      ctrl.found = [];
       if (ctrl.searchStr.length == 0) {
         setEmptySearchMsg();
         return;
