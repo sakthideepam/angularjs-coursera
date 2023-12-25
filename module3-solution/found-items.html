@@ -1,0 +1,19 @@
+<div class="found-items">
+  <ul ng-if="foundCtrl.found.length > 0">
+    <li ng-repeat="item in foundCtrl.found">
+      <div class="found-menu-item">
+        <span class="item-name">{{ item.name }} ({{ item.short_name }}) </span>
+        <span class="item-desc">{{item.description}}</span>
+        <button
+          class="found-remove-btn"
+          ng-click="foundCtrl.onRemove({itemIndex: $index})"
+        >
+          Don't want this one!
+        </button>
+      </div>
+    </li>
+  </ul>
+  <div class="empty-msg" ng-if="foundCtrl.emptySearchMsg">
+    {{foundCtrl.emptySearchMsg}}
+  </div>
+</div>
