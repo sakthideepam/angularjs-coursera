@@ -1,8 +1,11 @@
 <!-- Loops through all menu items in the category passed in and 
      displays each of the menu item as clickable link -->
 <ul>
-  <li ng-repeat="item in $ctrl.itemList" ng-click="$ctrl.clickedIndex = $index">
-    <a class="list-links" ui-sref="items.details({itemDesc: item.description})"
+  <li ng-repeat="item in $ctrl.itemList">
+    <a
+      class="list-links"
+      ui-sref="items.details({itemDesc: item.description})"
+      ng-click="$ctrl.clickedIndex = $index"
       >{{item.name}}</a
     >
     <ui-view ng-if="$ctrl.clickedIndex == $index"></ui-view>
