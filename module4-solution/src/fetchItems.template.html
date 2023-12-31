@@ -1,0 +1,7 @@
+<!-- Links to go back to home state or categories state -->
+<a class="route-links secondary-pages" ui-sref="categories">All Categories</a>
+<a class="route-links secondary-pages" ui-sref="home">Home</a>
+
+<h1 class="restaurant-headers">{{$ctrl.oneCategory.category.name}}</h1>
+<!-- items component to display menu items for a clicked category -->
+<items item-list="$ctrl.oneCategory.menu_items"></items>

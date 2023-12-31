@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body ng-app="menuApp">
+    <ui-view></ui-view>
+    <!-- angular and ui-router -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Two module files -->
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/data.module.js"></script>
+
+    <!-- The route config file -->
+    <script src="src/routes.js"></script>
+
+    <!-- Component files -->
+    <script src="src/categories.component.js"></script>
+    <script src="src/items.component.js"></script>
+
+    <!-- Controller files -->
+    <script src="src/fetchCategories.controller.js"></script>
+    <script src="src/fetchItems.controller.js"></script>
+    <script src="src/itemDetail.controller.js"></script>
+
+    <!-- Service file -->
+    <script src="src/menudata.service.js"></script>
+  </body>
+</html>

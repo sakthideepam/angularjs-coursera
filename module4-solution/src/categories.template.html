@@ -1,0 +1,10 @@
+<!-- Loops through the list of category items and display each category's name
+     as a clickable link. A clicked link triggers the state transition to 'items'
+     state with the state parameter 'itemShortName' -->
+<ul>
+  <li ng-repeat="category in $ctrl.categoryItems">
+    <a class="list-links" ui-sref="items({itemShortName: category.short_name})"
+      >{{category.name}}</a
+    >
+  </li>
+</ul>
