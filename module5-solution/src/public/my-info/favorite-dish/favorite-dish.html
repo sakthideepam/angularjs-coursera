@@ -1,0 +1,15 @@
+<div class="favorite-dish-panel">
+  <span class="dish-name">{{$ctrl.title}}</span>
+  <br />
+  <span class="value">{{$ctrl.desc}}</span>
+  <br />
+  <span class="value">
+    <img
+      class="img-responsive"
+      width="250"
+      height="150"
+      ng-src="images/menu/{{$ctrl.categoryShortName}}/{{$ctrl.shortName}}.jpg"
+      alt="{{$ctrl.title}}"
+    />
+  </span>
+</div>

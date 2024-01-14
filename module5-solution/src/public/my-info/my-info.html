@@ -1,0 +1,38 @@
+<div class="my-info">
+  <h1>My Info</h1>
+  <div ng-if="!$ctrl.signedUpData">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+  </div>
+  <div class="signed-up-data" ng-if="$ctrl.signedUpData">
+    <div class="formEntry">
+      <span class="label">First Name: </span>
+      <span class="value">{{$ctrl.signedUpData.firstName}}</span>
+    </div>
+
+    <div class="formEntry">
+      <span class="label">Last Name: </span>
+      <span class="value">{{$ctrl.signedUpData.lastName}}</span>
+    </div>
+
+    <div class="formEntry">
+      <span class="label">Email Address: </span>
+      <span class="value">{{$ctrl.signedUpData.email}}</span>
+    </div>
+
+    <div class="formEntry">
+      <span class="label">Phone Number: </span>
+      <span class="value">{{$ctrl.signedUpData.phone}}</span>
+    </div>
+
+    <div class="formEntry">
+      <span class="label">Favorite Dish: </span>
+      <span class="value">{{$ctrl.signedUpData.favoriteDish}}</span>
+      <favorite-dish
+        title="$ctrl.favoriteDishDetails.title"
+        desc="$ctrl.favoriteDishDetails.desc"
+        short-name="$ctrl.signedUpData.favoriteDish"
+        category-short-name="$ctrl.favoriteDishDetails.categoryShortName"
+      ></favorite-dish>
+    </div>
+  </div>
+</div>

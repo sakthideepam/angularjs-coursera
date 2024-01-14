@@ -1,0 +1,292 @@
+/* HOME PAGE */
+.container .jumbotron {
+  box-shadow: 0 0 50px #3f0c1f;
+  border: 2px solid #3f0c1f;
+}
+
+#menu-tile,
+#specials-tile,
+#map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+}
+#menu-tile:hover,
+#specials-tile:hover,
+#map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile {
+  background: url("../images/menu-tile.jpg") no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url("../images/specials-tile.jpg") no-repeat;
+  background-position: center;
+}
+#menu-tile span,
+#specials-tile span,
+#map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.8;
+}
+/* END HOME PAGE */
+
+/* MENU CATEGORIES PAGE */
+.category-tile {
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.8;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div {
+  margin-bottom: 50px;
+}
+/* END MENU CATEGORIES PAGE */
+
+/* SINGLE CATEGORY PAGE */
+.menu-item-tile {
+  margin-bottom: 25px;
+}
+.menu-item-tile hr {
+  width: 80%;
+}
+.menu-item-tile .menu-item-price {
+  font-size: 1.1em;
+  text-align: right;
+  margin-top: -15px;
+  margin-right: -15px;
+}
+.menu-item-tile .menu-item-price span {
+  font-size: 0.6em;
+}
+.menu-item-photo {
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+.menu-item-photo div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background-color: #557c3e;
+  text-align: center;
+}
+.menu-item-description {
+  padding-right: 30px;
+}
+h3.menu-item-title {
+  margin: 0 0 10px;
+}
+.menu-item-details {
+  font-size: 0.9em;
+  font-style: italic;
+}
+/* END SINGLE CATEGORY PAGE */
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .container .jumbotron {
+    background: url("../images/jumbotron_1200.jpg") no-repeat;
+    height: 675px;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Home Page */
+  .container .jumbotron {
+    background: url("../images/jumbotron_992.jpg") no-repeat;
+    height: 558px;
+  }
+  /* End Home Page */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Home Page */
+  .container .jumbotron {
+    background: url("../images/jumbotron_768.jpg") no-repeat;
+    height: 432px;
+  }
+  /* End Home Page */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Home Page */
+  .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
+  #menu-tile,
+  #specials-tile {
+    width: 360px;
+    margin: 0 auto 15px;
+  }
+
+  .menu-item-photo {
+    margin-right: auto;
+  }
+  .menu-item-tile .menu-item-price {
+    text-align: center;
+  }
+  .menu-item-description {
+    text-align: center;
+  }
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Home page */
+  #menu-tile,
+  #specials-tile {
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
+}
+
+/* Sign form */
+.sign-up {
+  margin: 10px;
+  padding: 10px;
+}
+
+.sign-up-form label {
+  width: 115px;
+}
+
+.sign-up-form .value {
+  color: black;
+  border-radius: 5px;
+}
+
+.sign-up-form legend {
+  color: white;
+}
+
+.sign-up-form .submit-button {
+  margin-left: 100px;
+  margin-top: 10px;
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+.sign-up-form .submit-button[disabled="disabled"] {
+  background-color: grey;
+  border: 2px solid grey;
+}
+
+.ng-touched.ng-invalid,
+.sign-up-form .field-invalid {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.sign-up-form .error-message {
+  color: red;
+  background-color: yellow;
+  border: yellow 2px solid;
+  border-radius: 5px;
+  padding: 2px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.sign-up-form-entry {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.sign-up .acknowledgement {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* My info */
+.formEntry {
+  margin-bottom: 5px;
+}
+
+.formEntry .value {
+  color: green;
+}
+
+.my-info {
+  margin: 10px;
+  padding: 10px;
+}
+
+.signed-up-data {
+  padding: 10px;
+}
+
+/* Favorite dish */
+.favorite-dish-panel {
+  border: 2px solid green;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  color: green;
+
+  .dish-name {
+    font-size: 1.3em;
+  }
+
+  img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    margin: 0px auto;
+  }
+}

@@ -1,0 +1,137 @@
+<div class="sign-up">
+  <form
+    ng-if="!$ctrl.committedData"
+    class="sign-up-form"
+    name="signUpForm"
+    novalidate
+  >
+    <fieldset>
+      <legend>Sign Up</legend>
+
+      <div class="sign-up-form-entry">
+        <label for="firstName">First Name</label>
+        <input
+          class="value"
+          ng-model="$ctrl.userData.firstName"
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          required
+          minlength="3"
+          maxlength="15"
+        />
+        <span
+          class="error-message"
+          ng-if="signUpForm.firstName.$touched && signUpForm.firstName.$error.required"
+          >First Name is required</span
+        >
+        <span
+          class="error-message"
+          ng-if="!signUpForm.firstName.$error.required && signUpForm.firstName.$error.minlength"
+          >First Name must be at least 3 characters long</span
+        >
+        <span
+          class="error-message"
+          ng-if="signUpForm.firstName.$error.maxlength"
+          >First Name must not exceed 15 characters</span
+        >
+      </div>
+
+      <div class="sign-up-form-entry">
+        <label for="lastName">Last Name</label>
+        <input
+          ng-model="$ctrl.userData.lastName"
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          required
+          minlength="3"
+          maxlength="15"
+          class="value"
+        />
+        <span
+          class="error-message"
+          ng-if="signUpForm.lastName.$touched && signUpForm.lastName.$error.required"
+          >Last Name is required</span
+        >
+        <span
+          class="error-message"
+          ng-if="!signUpForm.lastName.$error.required && signUpForm.lastName.$error.minlength"
+          >Last Name must be at least 3 characters long</span
+        >
+        <span class="error-message" ng-if="signUpForm.lastName.$error.maxlength"
+          >Last Name must not exceed 15 characters</span
+        >
+      </div>
+
+      <div class="sign-up-form-entry">
+        <label for="emailAddress">Email Address</label>
+        <input
+          ng-model="$ctrl.userData.email"
+          type="email"
+          name="emailAddress"
+          placeholder="Email Address"
+          class="value"
+          required
+        />
+        <span
+          class="error-message"
+          ng-if="signUpForm.emailAddress.$touched && signUpForm.emailAddress.$error.required"
+          >Email is required</span
+        >
+        <span
+          class="error-message"
+          ng-if="!signUpForm.emailAddress.$error.required && signUpForm.emailAddress.$invalid"
+          >Invalid email address. Must be in a format name@domain.com</span
+        >
+      </div>
+
+      <div class="sign-up-form-entry">
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          ng-model="$ctrl.userData.phone"
+          type="text"
+          name="phoneNumber"
+          placeholder="123-456-7890"
+          pattern="(\d{3})-(\d{3})-(\d{4})"
+          class="value"
+        />
+        <span
+          class="error-message"
+          ng-if="signUpForm.phoneNumber.$invalid && signUpForm.phoneNumber.$touched"
+        >
+          Phone must be in the format ###-###-####
+        </span>
+      </div>
+
+      <div class="sign-up-form-entry">
+        <label for="favoriteDish">Favorite Dish</label>
+        <input
+          class="upper-case value"
+          ng-model="$ctrl.userData.favoriteDish"
+          type="text"
+          name="favoriteDish"
+          placeholder="L1"
+        />
+        <span
+          class="error-message"
+          ng-if="$ctrl.userData.favoriteDish && !$ctrl.isFavoriteDishValid()"
+        >
+          No such menu number exists
+        </span>
+      </div>
+
+      <input
+        class="submit-button"
+        type="button"
+        ng-disabled="signUpForm.$invalid || !$ctrl.isFavoriteDishValid()"
+        ng-click="$ctrl.onSubmit()"
+        value="Submit"
+      />
+    </fieldset>
+  </form>
+
+  <div class="acknowledgement" ng-if="$ctrl.committedData">
+    Your information has been saved
+  </div>
+</div>
